@@ -20,10 +20,10 @@ module.exports = function(app) {
             for (var i = 0; i < friends.length; i++) {
                 // Array of different scores to each question
                 var compArray = [];
-                console.log(friends[i].scores);
-                for (var j = 0; j < friends[i].scores.length; j++) {
+                let friendScore = friends[i]['scores[]'];
+                for (var j = 0; j < friendScore.length; j++) {
                     //push absolute value of difference in answers to question
-                    compArray.push(Math.abs(friends[i].scores[j] - parseFloat(scores[j])));
+                    compArray.push(Math.abs(friendScore[j] - parseFloat(scores[j])));
 
                 }
                 //sum of all values in compaArray
